@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="25dp"
+    app:cardBackgroundColor="@android:color/transparent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_card">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="25dp">
+
+            <ImageView
+                android:id="@+id/img_flag_club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/test_image"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name_command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Real Madrid"/>
+
+        <TextView
+            android:id="@+id/tv_descriptions_command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical|end"
+            android:justificationMode="inter_word"
+            android:text="В последнем туре РПЛ решалось многое: кто-то боролся за Лигу чемпионов, а кто-то — за право остаться в Премьер-Лиге. ЦСКА имел шансы пробиться в Лигу конференций — новый еврокубковый турнир под эгидой УЕФА. Для этого армейцам нужно было побеждать «Динамо», но с задачей они не справились (2:3).\n\n\nПо итогам сезона ЦСКА довольствовался только шестым местом и в еврокубки не попал. Такого с армейцами не случалось очень давно — 21 год. Вспоминаем, каким был мир и футбол в 2000 году, когда ЦСКА в прошлый раз пролетел мимо Европы."
+            />
+
+        <LinearLayout
+            android:id="@+id/btn_compound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_compound">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:textAlignment="center"
+                android:text="compound"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@drawable/bg_btn_compound">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
